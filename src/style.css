@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: Lato;
+  background-image: url("https://images.pexels.com/photos/242236/pexels-photo-242236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}
+
+nav {
+  background-color: peru;
+  position: absolute;
+  top: 0;
+  height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: beige;
+  border-bottom: 4px solid rgb(184, 116, 48);
+}
+
+.nav-user {
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+.nav-title {
+  padding-left: 40px;
+}
+
+main {
+  margin-top: 65px;
+  padding: 20px;
+}
+
+.userNameSection {
+}
+
+.userNameSection label {
+  font-size: 12px;
+}
+
+.userNameSection input {
+  height: 10px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+}
