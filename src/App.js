@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Home"
-import Hot from "./components/Hot"
-import Regular from "./components/Regular"
-import Navbar from "./components/Navbar";
-import NewMeme from "./components/NewMeme";
+import Home from "./views/Home"
+import Hot from "./views/Hot"
+import Regular from "./views/Regular"
+import Navbar from "./views/Navbar";
+import NewMeme from "./views/NewMeme";
+import Error from "./views/Error";
 
 
 function App() {
@@ -12,11 +13,12 @@ function App() {
       <Navbar />
       <div className="container">
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/hot" element={<Hot />}></Route>
-          <Route path="/regular" element={<Regular />}></Route>
-          <Route path="/newMeme" element={<NewMeme />}></Route>
-
+          <Route index
+            element={<Home />} />
+          <Route path="/hot" element={<Hot />} />
+          <Route path="/regular" element={<Regular />} />
+          <Route path="/new-meme" element={<NewMeme />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </div>
     </BrowserRouter>

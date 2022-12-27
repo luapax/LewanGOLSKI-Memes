@@ -12,7 +12,11 @@ code {
     monospace;
 }
 
-
+/* div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+} */
 
 
 .navbar ul {

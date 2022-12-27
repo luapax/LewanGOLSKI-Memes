@@ -17,7 +17,7 @@ export default function Navbar() {
                     <NavLink to="/regular" className={getClassName}>Regular</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/newMeme" className={getClassName}><button>Add new meme</button></NavLink>
+                    <NavLink to="/new-meme" className={getClassName}><button>Add new meme</button></NavLink>
                 </li>
             </ul>
 
