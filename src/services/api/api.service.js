@@ -3,7 +3,7 @@ import { memesList } from "../../data/memesList"
 let memsData = memesList;
 
 
-// Zakładamay ze memy znajduja sie w zasobie zewnetrznym, np baza, wtedy do podmiany podczas przesniesienia danych jest wyłacznie logika w samym serwisie
+// Zakładam, że memy znajduja sie w zasobie zewnetrznym, np baza, wtedy do podmiany podczas przesniesienia danych jest wyłacznie logika w samym serwisie
 const apiServiceDef = () => {
     const getRegularMems = async () => {
         return new Promise((resolve) => {
@@ -42,8 +42,6 @@ const apiServiceDef = () => {
         addMem,
         changeMem
     }
-
-
 }
 
 export const apiService = apiServiceDef()
