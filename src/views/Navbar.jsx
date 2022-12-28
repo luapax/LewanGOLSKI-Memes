@@ -11,6 +11,9 @@ export default function Navbar() {
         <nav className="navbar">
             <ul>
                 <li className="nav-item">
+                    <NavLink to="/" className={getClassName}>Home</NavLink>
+                </li>
+                <li className="nav-item">
                     <NavLink to="/hot" className={getClassName}>Hot</NavLink>
                 </li>
                 <li className="nav-item">
