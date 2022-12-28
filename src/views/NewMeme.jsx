@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { apiService } from "../services/api/api.service";
+import Footer from "../components/Footer"
+
 
 export default function NewMeme() {
 
@@ -15,11 +17,9 @@ export default function NewMeme() {
         // }
         // else if (!user) {
         //     alert('Please add the user name')
-
         // }
         // else if (!link) {
         //     alert('Please add the meme link')
-
         // }
         // else {
         setNewMeme({
@@ -28,11 +28,6 @@ export default function NewMeme() {
             img: link,
             upvotes: 0,
             downvotes: 0,
-            // title: "agata",
-            // user: "agata",
-            // img: "https://d-art.ppstatic.pl/kadry/k/r/1/7a/70/62f5efe40f80a_o_medium.jpg",
-            // upvotes: 0,
-            // downvotes: 0,
         })
         await apiService.addMem(newMeme)
         setTitle('');
@@ -52,6 +47,6 @@ export default function NewMeme() {
                 <input id="link" type="text" value={link} placeholder="Enter your meme link" onChange={e => setLink(e.target.value)}></input>
                 <input type="submit" value="Add your meme" className="btn-submit"></input>
             </form>
-
+            <Footer />
         </>);
 }

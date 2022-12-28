@@ -222,6 +222,13 @@ form .btn-submit:hover {
   }
 }
 
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: black;
+  background-color: #ebe582;
+}
 
 
 @media screen and (max-width: 650px) {

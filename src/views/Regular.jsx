@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import MemComponent from "../components/MemComponent";
 import { apiService } from "../services/api/api.service";
+import Footer from "../components/Footer"
 
 
 export default function Regular() {
@@ -22,6 +23,7 @@ export default function Regular() {
     return (
         <><h2 className="page-title">The Lewandowski memes</h2>
             {mems.map(mem => <MemComponent key={mem.id} mem={mem} onMemStatChange={onMemStatChange} />)}
+            <Footer />
         </>);
 }
 
