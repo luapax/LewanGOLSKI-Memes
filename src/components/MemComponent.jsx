@@ -1,6 +1,6 @@
 import { apiService } from "../services/api/api.service";
 
-const Mem = ({ mem, onMemStatChange }) => {
+const MemComponent = ({ mem, onMemStatChange }) => {
 
     const onUp = async () => {
         const memChanged = { ...mem }
@@ -15,11 +15,14 @@ const Mem = ({ mem, onMemStatChange }) => {
         await apiService.changeMem(mem.id, memChanged)
         await onMemStatChange()
     }
-    return <div>
-        <h3>{mem.title}</h3>
+    return <div className="memComponent">
+        {/* <h4>{mem.title}</h4>
+        <h5>Author: {mem.user}</h5> */}
         <img src={mem.img} alt={mem.title} />
-        <button onClick={onUp}>Up</button><button onClick={onDown}>Down</button>
+        <div className="btn-vote">
+            <button onClick={onUp}>So funny!👍🏼</button>
+            <button onClick={onDown}>Meeeh..👎🏼</button></div>
     </div>
 }
 
-export default Mem
+export default MemComponent

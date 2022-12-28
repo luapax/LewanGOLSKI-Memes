@@ -1,27 +1,57 @@
+import { useState } from "react";
 import { apiService } from "../services/api/api.service";
 
 export default function NewMeme() {
 
-    const handleNewMem = async (e) => {
+    const [newMeme, setNewMeme] = useState()
+    const [title, setTitle] = useState()
+    const [user, setUser] = useState()
+    const [link, setLink] = useState()
 
-        // dodac dane z inputow do tablicy i const mem z lekcji o inputach
-        console.log(e.target.value);
-
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
-        await apiService.addMem()
+        // if (!title) {
+        //     alert('Please add the title')
+        // }
+        // else if (!user) {
+        //     alert('Please add the user name')
+
+        // }
+        // else if (!link) {
+        //     alert('Please add the meme link')
+
+        // }
+        // else {
+        setNewMeme({
+            title: title,
+            user: user,
+            img: link,
+            upvotes: 0,
+            downvotes: 0,
+            // title: "agata",
+            // user: "agata",
+            // img: "https://d-art.ppstatic.pl/kadry/k/r/1/7a/70/62f5efe40f80a_o_medium.jpg",
+            // upvotes: 0,
+            // downvotes: 0,
+        })
+        await apiService.addMem(newMeme)
+        setTitle('');
+        setUser('');
+        setLink('');
     }
 
     return (
         <>
-            <form>
-                <label>Title</label>
-                <input></input>
-                <label>User name</label>
-                <input></input>
-                <label>Link</label>
-                <input></input>
-                <button type="submit" onClick={handleNewMem}>Add meme</button>
+            <h2 className="page-title">The Lewandowski memes</h2>
+            <form onSubmit={handleFormSubmit}>
+                <label htmlFor="title">Title</label>
+                <input id="title" type="text" value={title} placeholder="Enter the title" onChange={e => setTitle(e.target.value)}></input>
+                <label htmlFor="user">User name</label>
+                <input id="user" type="text" value={user} placeholder="Enter your name" onChange={e => setUser(e.target.value)}></input>
+                <label htmlFor="link">Link</label>
+                <input id="link" type="text" value={link} placeholder="Enter your meme link" onChange={e => setLink(e.target.value)}></input>
+                <input type="submit" value="Add your meme" className="btn-submit"></input>
             </form>
-            <h1>This is NewMeme</h1>
+
         </>);
 }

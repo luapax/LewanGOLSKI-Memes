@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -12,12 +14,108 @@ code {
     monospace;
 }
 
-/* div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-} */
 
+
+/* Navigation styles */
+.navbar {
+  padding-top: 0.5rem;
+  background-color: #effa90;
+  padding-bottom: 0;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 0;
+
+
+}
+
+.btn-navbar {
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.05rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: 2.5px solid blueviolet;
+  background-color: blueviolet;
+  color: white;
+}
+
+.btn-navbar:hover {
+  background-color: white;
+  /* font-weight: 600; */
+  color: blueviolet;
+}
+
+li {
+  padding-bottom: 1.5rem;
+  font-size: 1.4rem;
+
+}
+
+.container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.memComponent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  align-items: center;
+  padding-bottom: 2rem;
+  min-width: 800px;
+  border-bottom: 1px solid black;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-family: 'Pacifico', cursive;
+}
+
+.memComponent button {
+  /* border-radius: 10%; */
+  /* margin-top: 1rem; */
+  padding: 0.8rem 1rem;
+  letter-spacing: 0.05rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  min-width: 200px;
+  text-align: center;
+  background-color: blueviolet;
+  color: white;
+  border: 0.5px solid blueviolet;
+  border-radius: 0% 0% 20% 20%;
+  margin: 0 1rem;
+}
+
+.memComponent button:active {
+  box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
+  transform: scale(.98);
+}
+
+.memComponent button:hover {
+
+
+  background-color: #effa90;
+  color: blueviolet;
+  border: 0.5px solid blueviolet;
+}
+
+
+
+
+
+
+.btn-votes {
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: space-around;
+
+}
 
 .navbar ul {
   list-style-type: none;
@@ -43,4 +141,102 @@ code {
 
 .nav-item a.active {
   font-weight: bold;
+}
+
+
+img {
+  border-radius: 10%;
+  width: 600px;
+  height: auto;
+}
+
+
+
+/* NewMeme section styles */
+form {
+  border-radius: 20%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 4rem 8rem 2rem 8rem;
+  border: 2px solid blueviolet;
+
+}
+
+label {
+  font-size: 1.1rem;
+}
+
+input {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem 0.5rem 0.2rem;
+  font-size: 1.1rem;
+}
+
+form .btn-submit {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.05rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  /* min-width: 200px; */
+  text-align: center;
+  background-color: #effa90;
+  /* color: white; */
+  border: 0.5px solid blueviolet;
+}
+
+
+form .btn-submit:active {
+  box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
+  transform: scale(.98);
+}
+
+form .btn-submit:hover {
+  background-color: blueviolet;
+  color: white;
+}
+
+
+
+/* Media styles */
+@media screen and (max-width: 850px) {
+
+  img {
+    width: 500px;
+  }
+
+  .memComponent button {
+    font-size: 1rem;
+    min-width: 40px;
+
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+
+  img {
+    width: 300px;
+  }
+
+  .memComponent button {
+    font-size: 0.8rem;
+    min-width: 20px;
+  }
+
+
+  label {
+    font-size: 1.1rem;
+  }
+
+  input {
+    font-size: 0.8rem;
+  }
+
+  form .btn-submit {
+    font-size: 0.8rem;
+  }
+
 }

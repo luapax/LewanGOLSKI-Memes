@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import MemComponent from "../components/Mem";
+import MemComponent from "../components/MemComponent";
 import { apiService } from "../services/api/api.service";
 
 
@@ -20,7 +20,7 @@ export default function Regular() {
     }
 
     return (
-        <>
+        <><h2 className="page-title">The Lewandowski memes</h2>
             {mems.map(mem => <MemComponent key={mem.id} mem={mem} onMemStatChange={onMemStatChange} />)}
         </>);
 }

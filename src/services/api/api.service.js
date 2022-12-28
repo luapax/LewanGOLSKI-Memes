@@ -20,18 +20,18 @@ const apiServiceDef = () => {
         })
     }
 
-    const addMem = async (mem) => {
+    const addMem = async (meme) => {
         return new Promise((resolve) => {
-            memsData = [...memsData, { ...mem, id: memsData.length + 1 }]
+            memsData = [...memsData, { ...meme, id: memsData.length + 1 }]
             resolve()
         })
     }
 
 
-    const changeMem = async (id, mem) => {
+    const changeMem = async (id, meme) => {
         return new Promise((resolve) => {
-            const memToChangeIndex = memsData.findIndex(({ id: elId }) => elId === id)
-            memsData[memToChangeIndex] = { ...mem, id }
+            const memeToChangeIndex = memsData.findIndex(({ id: elId }) => elId === id)
+            memsData[memeToChangeIndex] = { ...meme, id }
             resolve()
         })
     }

@@ -10,16 +10,18 @@ import Error from "./views/Error";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <div className="container">
-        <Routes>
-          <Route index
-            element={<Home />} />
-          <Route path="/hot" element={<Hot />} />
-          <Route path="/regular" element={<Regular />} />
-          <Route path="/new-meme" element={<NewMeme />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
+      <div className="main">
+        <Navbar />
+        <div className="container">
+          <Routes>
+            <Route index
+              element={<Home />} />
+            <Route path="/hot" element={<Hot />} />
+            <Route path="/regular" element={<Regular />} />
+            <Route path="/new-meme" element={<NewMeme />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
   );
