@@ -207,7 +207,7 @@ form .btn-submit:hover {
 
 
 /* Media styles */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1024px) {
 
   img {
     width: 500px;
@@ -224,6 +224,7 @@ form .btn-submit:hover {
 
 .footer {
   position: fixed;
+  font-size: 0.7rem;
   width: 100%;
   bottom: 0;
   color: black;
@@ -231,7 +232,16 @@ form .btn-submit:hover {
 }
 
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
+
+  a {
+    font-size: 1.2rem;
+  }
+
+  .btn-navbar {
+    font-size: 0.9rem;
+  }
+
 
   img {
     width: 300px;
@@ -265,6 +275,73 @@ form .btn-submit:hover {
 
   form .btn-submit {
     font-size: 0.8rem;
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 0.6rem 0;
+    ;
+    margin: 0;
+  }
+
+  .nav-item {
+    padding: 0;
+  }
+
+  a {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    min-width: 0;
+  }
+
+  .btn-navbar {
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  img {
+    width: 300px;
+  }
+
+  .memComponent button {
+    font-size: 0.8rem;
+    min-width: 20px;
+  }
+
+  .page-title {
+    font-size: 1.3rem;
+  }
+
+  .home-page {
+    width: 400px;
+    margin-top: 2rem;
+    border-radius: 5%;
+  }
+
+  form {
+    padding: 1rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  input {
+    font-size: 0.8rem;
+    padding: 0.3rem;
+  }
+
+  form .btn-submit {
+    font-size: 0.8rem;
+    padding: 0.4rem;
   }
 
 }

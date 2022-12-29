@@ -32,12 +32,10 @@ export default function NewMeme() {
 
 
             console.log(newMeme)
-
             apiService.addMem(newMeme)
             setTitle('');
             setUser('');
             setLink('');
-
             alert('Your meme was added :)')
         }
     }
