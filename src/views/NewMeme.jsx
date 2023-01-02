@@ -5,10 +5,10 @@ import Footer from "../components/Footer"
 
 export default function NewMeme() {
 
-    const [newMeme, setNewMeme] = useState()
-    const [title, setTitle] = useState()
-    const [user, setUser] = useState()
-    const [link, setLink] = useState()
+    const [newMeme, setNewMeme] = useState('')
+    const [title, setTitle] = useState('')
+    const [user, setUser] = useState('')
+    const [link, setLink] = useState('')
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
